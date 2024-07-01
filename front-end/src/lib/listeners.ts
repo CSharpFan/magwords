@@ -1,6 +1,6 @@
 import { state, version } from "@/entrypoints/index";
 import { setupMovable } from "@/lib/handlers";
-import { type Word } from "@/lib/types";
+import type { Word } from "@/lib/types";
 import { reload, toHtmlWordId } from "@/lib/utils";
 
 export function setupHandlers(): void {
@@ -23,10 +23,7 @@ function onWords(words: Word[]): void {
     }
 }
 
-function onHup(
-    data: { id: number; v: number },
-    _callback: ({ id }: { id: number }) => void,
-): void {
+function onHup(data: { id: number; v: number }, _callback: ({ id }: { id: number }) => void): void {
     if (data?.id === undefined) {
         console.log("Invalid ping");
         return;
@@ -41,7 +38,7 @@ function onHup(
 
 function onPoets(data: { count: number }): void {
     if (data.count !== state.poets) {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        // biome-ignore lint/style/noNonNullAssertion: <explanation>
         document.getElementById("odo")!.innerHTML = data.count.toString(10);
     }
 
@@ -64,13 +61,9 @@ function onMove({ id, x, y }: { id: number; x: number; y: number }): void {
     const element = document.getElementById(wordId);
 
     if (element !== null) {
-        const left: string = Math.round(Math.random())
-            ? easeInOutQuad
-            : easeOutCirc;
+        const left: string = Math.round(Math.random()) ? easeInOutQuad : easeOutCirc;
 
-        const top: string = Math.round(Math.random())
-            ? easeInOutExpo
-            : easeOutBack;
+        const top: string = Math.round(Math.random()) ? easeInOutExpo : easeOutBack;
 
         const transition = `left ${time}ms ${left}, top ${time}ms ${top}`;
 

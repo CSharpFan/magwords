@@ -1,6 +1,8 @@
 {
     "debug.internalConsoleOptions": "openOnSessionStart",
     "prettier.configPath": "./.prettierrc.cjs",
+    "prettier.enable": false,
+    "eslint.enable": false,
     "rust-analyzer.debug.engineSettings": {
         "lldb": {
             "internalConsoleOptions": "openOnSessionStart",
