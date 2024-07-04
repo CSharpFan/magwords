@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "vitest --coverage.enabled=true",
+    "biome": "biome",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier": "prettier --write .",

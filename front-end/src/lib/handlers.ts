@@ -65,10 +65,7 @@ export function setupMovable(element: HTMLElement): void {
         diffX -= scrollX;
         diffY -= scrollY;
 
-        moveElement(
-            newLeft + diffX + (startScrollX + scrollX),
-            newTop + diffY + (startScrollY + scrollY),
-        );
+        moveElement(newLeft + diffX + (startScrollX + scrollX), newTop + diffY + (startScrollY + scrollY));
 
         lastScrollX = currentScrollX;
         lastScrollY = currentScrollY;

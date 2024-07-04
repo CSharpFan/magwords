@@ -1,5 +1,20 @@
 {
     "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+    "files": {
+        "ignore": [
+            "profiling/**",
+            "reports/**",
+            "back-end/src/**",
+            "back-end/tests/**",
+            "node_modules/**",
+            "target/**",
+            "coverage/**",
+            "dist/**",
+            "package.json",
+            "package-lock.json",
+            "tsconfig.json"
+        ]
+    },
     "formatter": {
         "enabled": true,
         "formatWithErrors": false,
@@ -7,18 +22,12 @@
         "indentWidth": 4,
         "lineEnding": "lf",
         "lineWidth": 120,
-        "attributePosition": "auto",
-        "ignore": [
-            "**/profiling",
-            "**/reports",
-            "back-end/src",
-            "back-end/tests",
-            "node_modules",
-            "**/target",
-            "**/package.json",
-            "**/package-lock.json",
-            "**/tsconfig.json"
-        ]
+        "attributePosition": "auto"
+    },
+    "json": {
+        "parser": {
+            "allowComments": true
+        }
     },
     "organizeImports": { "enabled": true },
     "linter": {

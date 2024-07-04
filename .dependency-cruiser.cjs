@@ -142,10 +142,7 @@ const dependencyCruiserConfig = {
                 "from.pathNot re of the not-to-dev-dep rule in the dependency-cruiser configuration",
             from: {
                 path: "^(src)",
-                pathNot: [
-                    ".(spec|test).(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee.md)$",
-                    "test-helpers.ts$",
-                ],
+                pathNot: [".(spec|test).(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee.md)$", "test-helpers.ts$"],
             },
             to: {
                 dependencyTypes: ["npm-dev"],
